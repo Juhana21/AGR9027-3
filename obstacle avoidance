@@ -1,1 +1,32 @@
 
+import time
+
+# Simulated obstacle distances in centimetres
+front = 20
+left = 60
+right = 45
+back = 80
+
+print("Robot started")
+
+if front > 30:
+    print("Decision: Move forward")
+
+elif left > 30 and left >= right:
+    print("Obstacle in front!")
+    print("Decision: Turn left")
+
+elif right > 30:
+    print("Obstacle in front!")
+    print("Decision: Turn right")
+
+elif back > 30:
+    print("No clear path in front or sides")
+    print("Decision: Move backward")
+
+else:
+    print("All directions blocked!")
+    print("Decision: Stop")
+
+print("Robot program completed")
+
